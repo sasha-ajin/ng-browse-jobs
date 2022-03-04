@@ -1,0 +1,53 @@
+<div *ngIf="authService.loggedInUser && !isEditMode" class="box">
+    <h1>Profile</h1>
+    <h4 class="text-info">Name: {{ authService.loggedInUser.name }}</h4>
+    <br>
+    <h4 class="text-info">Email: {{ authService.loggedInUser.email }}</h4>
+    <br>
+    <h4 class="text-info">Password: {{ authService.loggedInUser.password }}</h4>
+    <br>
+    <h4 class="text-info">ID:{{ authService.loggedInUser.id }}</h4>
+    <br>
+
+    <button (click)="onEdit()"><h4 class="text-info">Edit</h4></button>
+</div>
+
+<div *ngIf="isEditMode" class="d-flex justify-content-center align-items-center fds">
+    <form class="mt-4 bgc" [formGroup]="editForm">
+        <h3 class="text-info  d-flex justify-content-center">Name</h3>
+        <div class="d-flex justify-content-center">
+            <input type="text" formControlName="name">
+        </div>
+        <br>
+        <h3 class="text-info mt-3 d-flex justify-content-center">Password</h3>
+        <div class="d-flex justify-content-center">
+            <input type="password" formControlName="password">
+        </div>
+        <br>
+        <h3 class="text-info mt-3 d-flex justify-content-center">Repeat password</h3>
+        <div class="d-flex justify-content-center">
+            <input class="d-flex justify-content-center"
+                   type="password"
+                   formControlName="repeat_password">
+        </div>
+        <br>
+        <div class="d-flex justify-content-between mt-1">
+            <button class="border border-danger ml-3 mr-4"
+                    type="button"
+                    (click)="onCancelForm()">
+                Cancel
+            </button>
+            <button class="ml-3 mr-3"
+                    type="button"
+                    (click)="onSubmitForm()">
+                Submit
+            </button>
+            <button class="ml-3 mr-4 border border-dark"
+                    type="button"
+                    (click)="deleteAccount()">
+                Delete
+            </button>
+        </div>
+
+    </form>
+</div>

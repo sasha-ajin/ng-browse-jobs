@@ -1,0 +1,20 @@
+li {
+    list-style-type: none;
+    flex-wrap: wrap;
+    flex-basis: 25%;
+    background: #191919;
+    margin: 5px;
+    border-radius: 11%;
+    padding: 3%;
+
+}
+
+.cont {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    padding: 4%;
+}

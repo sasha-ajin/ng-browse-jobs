@@ -1,0 +1,9 @@
+<ul class="cont">
+    <li *ngFor="let ad of ads" class="box-ad-card">
+        <ad-card [ad]="ad"></ad-card>
+    </li>
+</ul>
+<div *ngIf="authService.role === roles.ORGANIZATION" class="d-flex justify-content-center mb-5">
+    <create-ad></create-ad>
+</div>
+

@@ -1,0 +1,36 @@
+<h3 class="d-flex justify-content-center text-success">{{ ad.title }}</h3>
+<p class="d-flex justify-content-center text-info">
+    {{ ad.description }}
+</p>
+<h5 class="text-info">Likes: {{ ad.likes.length }}</h5>
+<h5 class="text-info">Type: {{ ad.type }}</h5>
+<h5 class="text-info">Category: {{ ad.category }}</h5>
+
+<div *ngIf="authService.role === roles.USER">
+
+    <button class="btn btn-light" (click)="Like()">Like</button>
+    <button class="btn btn-light" (click)="candidate()">Candidate</button>
+    <div *ngIf="ad.appliedUsers[authService.loggedInUser?.id] !== undefined">
+        <h5 class="text-info"
+        >Curret state: <span class="text-warning">{{ ad.appliedUsers[authService.loggedInUser?.id] }}</span></h5
+        >
+    </div>
+</div>
+<br>
+<div *ngIf="authService.role === roles.ORGANIZATION">
+    <hr>
+    <div *ngFor="let c of candidates" class="d-flex justify-content-center">
+        <li>
+            <h5 class="text-warning">
+                {{ c.name | titlecase }} : {{ ad.appliedUsers[c.id] }}
+            </h5>
+            <button (click)="acceptCandidate(c.id)" class="candacrej ac">
+                Accept
+            </button>
+            <button (click)="rejectCandidate(c.id)" class="candacrej border border-danger">
+                Reject
+            </button>
+        </li>
+    </div>
+</div>
+

@@ -1,0 +1,23 @@
+<div class="body-login">
+    <form [formGroup]="loginForm" (ngSubmit)="login()" class="box">
+        <h1>Log IN</h1>
+        <label> <input formControlName="email" type="text" placeholder="Email"> </label>
+        <label> <input formControlName="password" type="password" placeholder="Password"> </label>
+        <br/>
+        <div class="d-flex justify-content-around">
+            <li *ngFor="let role of roles">
+                <input
+                        type="radio"
+                        id="{{ role }}"
+
+                        formControlName="loginRole"
+                        name="loginRole"
+                        value="{{ role }}"
+                />
+                <label for="{{ role }}" class="ml-1"><p>{{ role | titlecase }}</p></label>
+            </li>
+        </div>
+        <button type="submit" [disabled]="!loginForm.valid">Login</button>
+    </form>
+
+</div>

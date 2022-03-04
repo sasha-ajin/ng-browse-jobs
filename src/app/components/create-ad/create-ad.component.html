@@ -1,0 +1,40 @@
+<div class="bgc text-info ">
+    <h1 class="d-flex justify-content-center  txt-white mb-4">
+        Create Ad
+    </h1>
+    <form [formGroup]="createAd" (ngSubmit)="onSubmit()">
+        <label class="d-flex justify-content-center"><h3 class="text-success">Title:</h3></label>
+        <input class="d-flex justify-content-center" type="text" formControlName="title">
+        <br>
+        <label class="d-flex justify-content-center">
+            <h3 class="text-success">Description:</h3>
+        </label>
+        <input class="d-flex justify-content-center"
+               type="text" formControlName="description">
+
+
+        <br>
+
+        <label class="d-flex justify-content-center">
+            <h3 class="mb-3 text-success">Type:</h3></label>
+        <div class="d-flex justify-content-center">
+            <li *ngFor="let type of adTypes" class="ml-5 mr-5">
+                <input type="radio" formControlName="type" value="{{ type }}">
+                <label for="{{ type }}" class="ss">{{ type | titlecase }}</label>
+            </li>
+        </div>
+
+        <br>
+
+        <label class="d-flex justify-content-center">
+            <h3 class="mb-3 text-success">Category:</h3></label>
+        <div class="d-flex justify-content-center">
+            <li *ngFor="let category of adCategory" class="ml-5 mr-5">
+                <input type="radio" formControlName="category" value="{{ category }}"/>
+                <label for="{{ category }}">{{ category | titlecase }}</label>
+            </li>
+        </div>
+        <br>
+        <button type="submit"><h3>Create</h3></button>
+    </form>
+</div>

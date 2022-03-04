@@ -1,0 +1,60 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "zdravka.strahinova@gmail.com",
+      "password": "4",
+      "name": "zdravka.strahinova@gmail.com"
+    }
+  ],
+  "organizations": [
+    {
+      "id": 1,
+      "email": "zdravka.strahinova@gmail.com",
+      "password": "2",
+      "name": "Zdravka Strahinov"
+    }
+  ],
+  "ads": [
+    {
+      "id": 1,
+      "title": "Front-End",
+      "description": "Java Script",
+      "likes": [
+        1
+      ],
+      "type": "Part-time",
+      "category": "officeAdministration",
+      "appliedUsers": {
+        "1": "accepted"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Back-End",
+      "description": "Angular",
+      "likes": [
+        1
+      ],
+      "type": "Part-time",
+      "category": "officeAdministration",
+      "appliedUsers": {
+        "1": "accepted"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Full-Stack",
+      "description": "fff",
+      "type": "full-time",
+      "category": "Development",
+      "likes": [
+        1
+      ],
+      "appliedUsers": {
+        "1": "accepted"
+      },
+      "organization": 1
+    }
+  ]
+}
