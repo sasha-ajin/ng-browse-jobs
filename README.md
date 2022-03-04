@@ -1,6 +1,6 @@
 # ng-browse-jobs
 
-Site for searching job for developers.This angular project was created as a homework at Plovdiv University
+The site for job search for developers.This Angular project was created as a homework at Plovdiv University
 
 # Installation
 
