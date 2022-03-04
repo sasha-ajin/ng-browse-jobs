@@ -8,11 +8,11 @@ Install **node_modules**
 ```
 npm install
 ```
-Start json-server 
+Start **json-server**
 ```
 json-server --watch application.json
 ```
-And start angular project
+And start **Angular** project
 ```
 ng serve
 ```
