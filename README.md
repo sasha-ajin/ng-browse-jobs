@@ -6,7 +6,7 @@ Site for searching job for developers.This angular project was created as a home
 
 Install *node_modules*
 ```
-nmp install
+npm install
 ```
 Start json-server 
 ```
