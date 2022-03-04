@@ -4,7 +4,7 @@ Site for searching job for developers.This angular project was created as a home
 
 # Installation
 
-Install *node_modules*
+Install **node_modules**
 ```
 npm install
 ```
